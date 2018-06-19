@@ -1,0 +1,70 @@
+#or {
+  position: relative;
+  top: 250px;
+  left: 50px;
+}
+
+.border{
+  border-bottom: 1px solid grey;
+}
+
+#buttonDiv {
+  text-align: right;
+}
+
+#results {
+  margin-top: 50px;
+  font-size: 22px;
+}
+
+#nameDiv {
+  text-align: center;
+}
+#map {
+  height: 500px;
+  width: 500px;
+}
+
+#mydog{
+    float: left;
+    margin: 0 8px 0 -12px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+#dogs{
+    display: inline-block;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.6);
+    line-height: 32px;
+    padding: 0 12px;
+    border-radius: 16px;
+    background-color: #e4e4e4;
+    /*margin-bottom: 5px;*/
+    margin-top: 25px;
+    margin-right: 5px;
+}
+
+#parkSearch {
+  top: 30px;
+  margin-bottom: 50px;
+}
+
+#spacer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid grey;
+}
+
+#footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
