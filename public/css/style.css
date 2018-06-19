@@ -117,4 +117,20 @@ footer {
   .footer-copyright > .container {
     display: inline;
   }
+
+  .modal {
+    max-height: none;
+  }
+
+  .input-field{
+    margin-right: 20px;
+    /* margin-left: 20px !important; */
+    width: 220px !important;
+  }
+
+  #otherDogs{
+    /* margin-left: 100px !important; */
+  }
+  
+  
 }
