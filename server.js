@@ -85,28 +85,28 @@ app.get("/app", function(req, res) {
 // -----------------------------------------------
 // this route recieves the data loops through and creates the table
 
-app.post("/dataSet", function(req, res) {
-  var myResponse = req.body;
-  console.log(res);
-  // console.log(myResponse.features[0].attributes, myResponse.features[0].attributes.LAT);
-  for (var i = 0; myResponse.features.length > i; i++) {
-    models.parks.create({
-      name: myResponse.features[i].attributes.NAME,
-      address: myResponse.features[i].attributes.ADDRESS,
-      dogpark: myResponse.features[i].attributes.DOGPARK,
-      greenwayAcess: myResponse.features[i].attributes.GREENWAYACCESS,
-      walkingTrails: myResponse.features[i].attributes.WALKINGTRAILS,
-      restrooms: myResponse.features[i].attributes.RESTROOMS,
-      field: myResponse.features[i].attributes.MULTIPURPOSEFIELD,
-      url: myResponse.features[i].attributes.URL,
-      lat: myResponse.features[i].attributes.Lat,
-      lon: myResponse.features[i].attributes.Lon
-    });
-  }
-});
+// app.post("/dataSet", function(req, res) {
+//   var myResponse = req.body;
+//   console.log(res);
+//   // console.log(myResponse.features[0].attributes, myResponse.features[0].attributes.LAT);
+//   for (var i = 0; myResponse.features.length > i; i++) {
+//     models.parks.create({
+//       name: myResponse.features[i].attributes.NAME,
+//       address: myResponse.features[i].attributes.ADDRESS,
+//       dogpark: myResponse.features[i].attributes.DOGPARK,
+//       greenwayAcess: myResponse.features[i].attributes.GREENWAYACCESS,
+//       walkingTrails: myResponse.features[i].attributes.WALKINGTRAILS,
+//       restrooms: myResponse.features[i].attributes.RESTROOMS,
+//       field: myResponse.features[i].attributes.MULTIPURPOSEFIELD,
+//       url: myResponse.features[i].attributes.URL,
+//       lat: myResponse.features[i].attributes.Lat,
+//       lon: myResponse.features[i].attributes.Lon
+//     });
+//   }
+// });
 
-// ------------------------------------------------
-// this will drop and sync the table every time its run
+// // ------------------------------------------------
+// // this will drop and sync the table every time its run
 
 // models.sequelize.sync({ force: true }).then(function() {
 //   app.listen(PORT, function() {
