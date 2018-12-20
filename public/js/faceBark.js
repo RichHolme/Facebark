@@ -19,17 +19,17 @@ $("#submit").click(function() {
 
   var dogName = $("#dog-name").val();
   var dogBreed = $("#dog-breed").val();
-  //var dogPic = $("#dogPic").val();
+  var dogPic = $("#picture").val();
   var gender = $("#gender").val();
   var kids = $("#kids").prop("checked");
   var otherDogs = $("#otherDogs").prop("checked");
   var dogComment = $("#dogComment").val();
-  //console.log(dogName, dogBreed);
+  console.log(dogPic);
 
   var dogObject = {
     dogName: dogName,
     dogBreed: dogBreed,
-    //dogPic: dogPicture,
+    dogPic: dogPic,
     gender: gender,
     dogDescription: dogComment,
     otherDogs: otherDogs,
@@ -75,11 +75,11 @@ $(document).ready(function() {
     for (var key in dogObject) {
       dogObject[key] = null;
     }
-    console.log(dogObject);
+    // console.log(dogObject);
     $("input.autocomplete").autocomplete({
       data: dogObject
     });
-    console.log(dogObject);
+    // console.log(dogObject);
   });
 
   // $.get("/api/getUsersDogs", function(data) {

@@ -47,6 +47,7 @@ module.exports = function(app, user) {
   //Getting all dogs
   app.get("/api/dogs", function(req, res) {
     db.dog.findAll({}).then(function(dbDogs) {
+      console.log(dbDogs)
       res.json(dbDogs);
     });
   });

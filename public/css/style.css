@@ -82,6 +82,11 @@ footer {
   color: white;
 }
 
+.dogImg{
+  width: 10% !important;
+
+}
+
 @media only screen and (max-width: 769px){
   
 }
