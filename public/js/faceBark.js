@@ -5,6 +5,28 @@
 var dogPicture;
 console.log("working");
 
+$.get("https://services1.arcgis.com/a7CWfuGP5ZnLYE7I/arcgis/rest/services/Wake_Parks_Public/FeatureServer/0/query?where=1%3D1&outFields=DOGPARK,GREENWAYACCESS,MULTIPURPOSEFIELD,PLAYGROUND,WALKINGTRAILS,RESTROOMS,Lat,Lon,NAME,URL&outSR=4326&f=json", function(data, status) {
+    
+  // console.log(data)
+  data = JSON.parse(data)
+  console.log(data.features[0])
+  parks = data.features[0]
+
+  if(parks){
+    console.log('parks exisits')
+    console.log(parks)
+    $.post("/picupload", parks).then(function(res) {
+      console.log('parks sent');
+      console.log(parks)
+      res.end();
+    });
+  }
+ 
+  
+    // var str = JSON.stringify(data, null, 2);
+    // console.log(str.features)
+  });
+
 $(document).ready(function() {
   $(".modal").modal();
   $("select").formSelect();

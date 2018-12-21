@@ -82,6 +82,10 @@ app.get("/app", function(req, res) {
   res.sendFile(path.join(__dirname, "app.html"));
 });
 
+// app.post("api/addParks", function(req, res) {
+//   console.log(req.body.data)
+// });
+
 // -----------------------------------------------
 // this route recieves the data loops through and creates the table
 

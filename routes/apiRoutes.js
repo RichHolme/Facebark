@@ -16,6 +16,7 @@ var KilometersToMiles = require("kilometers-to-miles");
 
 module.exports = function(app, user) {
   //Getting the park data used by Google Maps App
+
   app.get("/api/parks", function(req, res) {
     db.parks.findAll({}).then(function(dbParks) {
       res.json(dbParks);
@@ -181,9 +182,15 @@ module.exports = function(app, user) {
     });
   });
 
-  app.post("/picupload", function(req, res) {
-    if (req.files) {
-      console.log(req.files);
+  app.post("/picupload", function(req, res, err) {
+    // if (req.files) {
+    //   console.log(req.files);
+    // }
+
+    console.log(req.body)
+
+    if(err){
+      console.log(err)
     }
   });
 
@@ -220,4 +227,5 @@ module.exports = function(app, user) {
         res.json(dbDogs);
       });
   });
+
 };
