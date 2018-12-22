@@ -24,7 +24,7 @@ $(document).ready(function() {
             
                 holder = [];
                 choiceArr[i] = choiceArr[i].replace('#','');
-                var choice = "yes";
+                var choice = true;
                 holder.push(choiceArr[i], choice);
                 picks.push(holder);
                 choiceArr[i] = choiceArr[i].replace('','#');

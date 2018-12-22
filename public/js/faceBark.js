@@ -7,10 +7,10 @@ console.log("working");
 
 // use this to add add all parks to db
 // -----------------------------------------------------------------
-// $.get("https://services1.arcgis.com/a7CWfuGP5ZnLYE7I/arcgis/rest/services/Wake_Parks_Public/FeatureServer/0/query?where=1%3D1&outFields=DOGPARK,GREENWAYACCESS,MULTIPURPOSEFIELD,PLAYGROUND,WALKINGTRAILS,RESTROOMS,Lat,Lon,NAME,URL&outSR=4326&f=json", function(data, status) {
+// $.get("https://services1.arcgis.com/a7CWfuGP5ZnLYE7I/arcgis/rest/services/Wake_Parks_Public/FeatureServer/0/query?where=1%3D1&outFields=DOGPARK,GREENWAYACCESS,MULTIPURPOSEFIELD,PLAYGROUND,WALKINGTRAILS,RESTROOMS,Lat,Lon,NAME,URL,ADDRESS&outSR=4326&f=json", function(data, status) {
 
 //   data = JSON.parse(data)
-//   console.log(data.features)
+//   // console.log(data.features)
 //   parks = data.features
 
 //   var parkObject = {
@@ -19,7 +19,7 @@ console.log("working");
 
 //   if(parks){
 
-//     $.post("/picupload", parkObject).then(function(res) {
+//     $.post("/dataSet", parkObject).then(function(res) {
 
 //       res.end();
 //     });

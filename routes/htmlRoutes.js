@@ -46,6 +46,7 @@ module.exports = function(app, user) {
       });
     console.log(req.user.id);
   });
+  
   app.get("/findPark2", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/findPark2.html"));
   });
