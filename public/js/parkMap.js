@@ -11,8 +11,9 @@ function initMap() {
   // Create a map object and specify the DOM element
   // for display.
   var map = new google.maps.Map(document.getElementById("map"), {
-    center: myLatLng
-    //zoom: 10
+    // zoom: 16,
+    center: myLatLng,
+    // zoom: 35
   });
 
   function isEmpty(obj) {
@@ -45,7 +46,8 @@ function initMap() {
     var marker = new google.maps.Marker({
       map: map,
       position: new google.maps.LatLng(coords.lat, coords.lng),
-      title: name
+      title: name,
+      
     });
     // console.log(coords.lat, coords.lng);
     bounds.extend(marker.position);
@@ -56,7 +58,8 @@ function initMap() {
         "</h5><hp>" +
         address +
         "</p><p><a href='page.html'>Pick this Park</a></hp>",
-      maxWidth: 200
+      maxWidth: 200,
+      // zoom: 15
     });
 
     marker.addListener("click", function() {
