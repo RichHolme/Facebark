@@ -32,12 +32,16 @@ $("body").on("click", "#parkButton", function() {
     // console.log(userid);
   $.get("/api/getUsersDogs", function(req, res) {
     
-      console.log(req[0].name);
-      var dog = $("<div id='dogs'>");
-      var img = $("<img id='mydog' src='./images/dog4.jpg' alt='Dog Chip'>");
-      dog.append(img);
-      dog.append(req[0].name);
-      $("#dogsToTake").append(dog);
+      // console.log(req[0].name);
+      $("#dogsToTake").empty()
+      for(var i = 0; i < req.length; i++){
+        var dog = $("<div id='dogs'>");
+        var img = $("<img id='mydog' src='"+req[i].picture+"' alt='"+req[i].name+"'>");
+        dog.append(img);
+        dog.append(req[i].name);
+        $("#dogsToTake").append(dog);
+      }
+      
 
   });
 });
