@@ -182,17 +182,57 @@ module.exports = function(app, user) {
     });
   });
 
-  app.post("/picupload", function(req, res, err) {
-    // if (req.files) {
-    //   console.log(req.files);
-    // }
+  // route is not named corretly but is used to add all parks to db
+  // ----------------------------------------------------------------
+  // app.post("/picupload", function(req, res, err) {
 
-    console.log(req.body)
+  //   console.log(req.body.park)
 
-    if(err){
-      console.log(err)
-    }
-  });
+  //   req.body.park.forEach(function(park){
+  //     let name = park.attributes.NAME;
+  //     let address = park.attributes.ADDRESS;
+  //     let dogpark = false;
+  //     if(park.attributes.DOGPARK == 'Yes'){
+  //       dogpark = true
+  //     }
+  //     let greenway = false;
+  //     if(park.attributes.GREENWAYACCESS == 'Yes'){
+  //       greenway = true
+  //     }
+  //     let trails = false;
+  //     if(park.attributes.WALKINGTRAILS == 'Yes'){
+  //       trails = true
+  //     }
+  //     let restrooms = false;
+  //     if(park.attributes.RESTROOMS == 'Yes'){
+  //       restrooms = true
+  //     }
+  //     let multipurposefield = false;
+  //     if(park.attributes.MULTIPURPOSEFIELD == 'Yes'){
+  //       multipurposefield = true
+  //     }
+  //     let url = park.attributes.URL;
+  //     let lat = park.attributes.Lat;
+  //     let lon = park.attributes.Lon;
+
+  //     db.parks.create({
+  //       name: name,
+  //       address: address,
+  //       dogpark: dogpark,
+  //       greenwayAccess: greenway,
+  //       walkingTrails: trails,
+  //       restrooms: restrooms,
+  //       field: multipurposefield,
+  //       url: url,
+  //       lat: lat,
+  //       lon: lon
+  //     });
+  //   })
+
+  //   if(err){
+  //     console.log(err)
+  //   }
+  // });
 
   app.put("/api/addDogToPark/:parkid/:dogid", function(req, res) {
     console.log(req.params.dogId, req.params.parkid);
