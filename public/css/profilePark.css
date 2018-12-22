@@ -1,4 +1,4 @@
-img {
+#parkImg {
   border-style: solid;
   border-width: 2px;
   border-color: goldenrod;
@@ -8,3 +8,12 @@ img {
   position: relative;
   top: 40px;
 }
+
+.thumb{
+  margin-bottom: -1%;
+}
+
+.thumbdown{
+  margin-bottom: -4%;
+}
+

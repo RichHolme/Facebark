@@ -29,6 +29,13 @@ $("body").on("click", "#parkButton", function() {
 
  $(document).on('click', '#parkButton', function(username) {
     console.log('clicked');
+    var isStored = localStorage.getItem("currentParkImg");
+    if (isStored != null) {
+      localStorage.removeItem("currentParkImg");
+    }
+    currentParkImg = $(this).attr('parkImg');
+    console.log(currentParkImg);
+    localStorage.setItem("currentParkImg", currentParkImg);
     // console.log(userid);
   $.get("/api/getUsersDogs", function(req, res) {
     
