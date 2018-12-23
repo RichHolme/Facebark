@@ -47,6 +47,9 @@ $("#submit").click(function() {
   var otherDogs = $("#otherDogs").prop("checked");
   var dogComment = $("#dogComment").val();
   console.log(dogPic);
+  if(dogPic == ''){
+    dogPic = "https://i2.wp.com/blog.telus.com/wp-content/uploads/2015/03/LionPaw2.jpg"
+  }
 
   var dogObject = {
     dogName: dogName,
@@ -68,10 +71,10 @@ $("#submit").click(function() {
   //dogPicture = null;
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  var elems = document.querySelectorAll(".autocomplete");
-  var instances = M.Autocomplete.init(elems, options);
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//   var elems = document.querySelectorAll(".autocomplete");
+//   var instances = M.Autocomplete.init(elems, options);
+// });
 
 // Or with jQuery
 
