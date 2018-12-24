@@ -3,8 +3,8 @@ var currentPark = localStorage.getItem("currentPark");
 var currentParkImg = localStorage.getItem("currentParkImg");
 
 $(document).ready(function(username) {
-  console.log(currentPark);
-  console.log(currentParkImg)
+  // console.log(currentPark);
+  // console.log(currentParkImg)
   // console.log("clicked");
   $("#title").text("You're Going to " + currentPark + "!");
   $("#parkImg").attr('src', "./images/"+currentParkImg+"");

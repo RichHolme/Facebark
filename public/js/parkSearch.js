@@ -46,6 +46,7 @@ $(document).ready(function() {
 
             console.log('logging my data')
             console.log(res);
+            console.log(distanceObj);
             let returnedData = res;
             var resultbtn = $("<button class='waves-effect waves-light btn' id='resultsBtn'>");
             resultbtn.append("Search Results");
@@ -69,7 +70,7 @@ $(document).ready(function() {
                     break;
                 }
                 if (returnedData[i].distance == undefined) {
-                
+                    console.log('undefined')
                     returnedData[i].distance = distanceObj.miles;
                 }
 
