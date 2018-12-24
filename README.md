@@ -5,6 +5,7 @@
 ##### The contributors to FaceBark were: Max F., Jamie K., David T., Rich H. and Brandon H.
 
 ##### Here is our deployed Heroku web-app in action: https://face-bark.herokuapp.com
+<a href="https://face-bark.herokuapp.com" target="_blank">Facebark</a>
 
 ##### Here is a link to our PPT presentation: https://docs.google.com/presentation/d/1HguvXgU6yra5T5h9sIrVUF3BK3ZYxYXPoXL_uczu1OU/edit?usp=sharing
 
