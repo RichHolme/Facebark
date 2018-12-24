@@ -13,6 +13,10 @@
   }
 }
 
+.noResults{
+  margin-bottom: 10%;
+}
+
 #resultBtnDiv{
   margin-top: 12%;
 }
@@ -29,6 +33,8 @@
 
 #buttonDiv {
   text-align: right;
+  margin-top: -5%;
+  margin-bottom: 7%;
 }
 
 #results {
