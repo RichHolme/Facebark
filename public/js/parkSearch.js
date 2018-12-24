@@ -5,6 +5,8 @@ $(document).ready(function() {
         $('html,body').animate({
             scrollTop: $("#results").offset().top},
             'slow');
+
+        $('#resultBtnDiv').empty();
     });
 
     var parkObj = {};
@@ -78,7 +80,7 @@ $(document).ready(function() {
                         }
                         
                         // console.log($("#results").text());
-                        $('#searchFunctions').addClass('border');
+                        // $('#searchFunctions').addClass('border');
 
                         var park = $("<div class='park'>")
 
