@@ -1,6 +1,12 @@
 
 $(document).ready(function() {
 
+    $(document).on('click', '#resultsBtn', function() {
+        $('html,body').animate({
+            scrollTop: $("#results").offset().top},
+            'slow');
+    });
+
     var parkObj = {};
     var choiceArr = ["#dogPark", "#greenwayAcess", "#walkingTrails", "#restrooms", "#field"];
 
@@ -42,7 +48,7 @@ $(document).ready(function() {
             let returnedData = res;
             var resultbtn = $("<button class='waves-effect waves-light btn' id='resultsBtn'>");
             resultbtn.append("Search Results");
-            $("#btnRow").append(resultbtn);
+            $("#resultBtnDiv").append(resultbtn);
 
             $('#results').empty();
                 var dataLength = returnedData.length;

@@ -1,5 +1,20 @@
-#resultBtn{
-  float: left;
+#resultsBtn{
+  background-color: #ff9800 !important;
+}
+
+#resultsBtn {
+  animation: blinker 2s linear;
+  animation-iteration-count: 3;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#resultBtnDiv{
+  margin-top: 12%;
 }
 
 #or {

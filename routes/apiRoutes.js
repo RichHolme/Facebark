@@ -122,37 +122,37 @@ module.exports = function(app, user) {
           }
         });
     } 
-    // else {
-    //   db.parks.findAll({}).then(function(dbParks) {
-    //     var zipCode = req.body.distanceObj.zipCode;
-    //     var distanceArr = [];
-    //     if (zipCode != "") {
-    //       for (var i = 0; i < 100; i++) {
-    //         var ktm = new KilometersToMiles();
+    else {
+      db.parks.findAll({}).then(function(dbParks) {
+        var zipCode = req.body.distanceObj.zipCode;
+        var distanceArr = [];
+        if (zipCode != "") {
+          for (var i = 0; i < 100; i++) {
+            var ktm = new KilometersToMiles();
 
-    //         if (dbParks[i].address !== "") {
-    //           distance.get(
-    //             {
-    //               origin: zipCode,
-    //               destination: dbParks[i].address
-    //             },
-    //             function(err, data) {
-    //               if (err) return console.log(err);
+            if (dbParks[i].address !== "") {
+              distance.get(
+                {
+                  origin: zipCode,
+                  destination: dbParks[i].address
+                },
+                function(err, data) {
+                  if (err) return console.log(err);
 
-    //               distanceArr.push(ktm.get(parseInt(data.distance)));
-    //               if (distanceArr.length == 100) {
-    //                 var parks = addDistance(distanceArr, dbParks);
-    //                 res.json(parks);
-    //               }
-    //             }
-    //           );
-    //         }
-    //       }
-    //     } else {
-    //       res.json(dbParks);
-    //     }
-      // });
-    // }
+                  distanceArr.push(ktm.get(parseInt(data.distance)));
+                  if (distanceArr.length == 100) {
+                    var parks = addDistance(distanceArr, dbParks);
+                    res.json(parks);
+                  }
+                }
+              );
+            }
+          }
+        } else {
+          res.json(dbParks);
+        }
+      });
+    }
   });
 
   function addDistance(distanceArr, dbParks) {
