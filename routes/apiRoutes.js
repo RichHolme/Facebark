@@ -7,12 +7,12 @@ const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
 var googleMapsClient = require("@google/maps").createClient({
-  key: "AIzaSyD5DmSmmh7v2oUw48S4U4LR0CV9YLrANow"
+  key: ""
 });
 
 // var reverseGeocode = require('latlng-to-zip');
 var distance = require("google-distance");
-distance.apiKey = 'AIzaSyD5DmSmmh7v2oUw48S4U4LR0CV9YLrANow';
+distance.apiKey = '';
 var KilometersToMiles = require("kilometers-to-miles");
 
 module.exports = function(app, user) {
