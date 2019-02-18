@@ -14,6 +14,9 @@ var PORT = process.env.PORT || 8080;
 
 var path = require("path");
 
+var favicon = require('serve-favicon');
+app.use(favicon(path.join(__dirname,'public', 'images', 'paw.png')));
+
 // Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
